@@ -1,4 +1,5 @@
 // src/components/ThreeScene.js
+
 import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 
@@ -13,7 +14,7 @@ const ThreeScene = () => {
     mountRef.current.appendChild(renderer.domElement);
 
     const geometry = new THREE.BoxGeometry();
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+    const material = new THREE.MeshBasicMaterial({ color: 0x0d47a1 });
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
 
@@ -32,9 +33,9 @@ const ThreeScene = () => {
     };
   }, []);
 
-  return (<div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+  return (<section id="threescene" className="container" class="">
     <div class="md:flex" ref={mountRef}></div>
-    </div>);
+    </section>);
 };
 
 export default ThreeScene;
