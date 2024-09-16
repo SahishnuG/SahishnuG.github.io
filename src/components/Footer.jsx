@@ -1,10 +1,9 @@
 import React from 'react';
-import './Footer.css';
 
 const Footer = () => {
   return (
     <footer>
-      <div className="container">
+      <div className="max-w-lg mx-auto p-6 bg-gray-100 rounded-lg shadow-lg">
       <p>&yen; Thanks for visiting!</p>
       </div>
     </footer>

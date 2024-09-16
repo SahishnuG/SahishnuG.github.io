@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
   return (
-    <section id="about" className="container mx-auto px-4 py-12">
+    <section id="about" className="max-w-lg mx-auto p-6 bg-gray-100 rounded-lg shadow-lg">
       <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8">About Me</h2>
       
       <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-md overflow-hidden md:flex md:items-center md:space-x-6">
@@ -18,7 +18,7 @@ const About = () => {
         {/* Text Section */}
         <div className="p-6">
           <p className="text-gray-600 text-lg leading-relaxed">
-            Hello! I'm a second-year student at VIT Pune, currently involved in the IEEE student club. 
+            I'm a second-year student at VIT Pune, currently an Executive Commitee member in the IEEE student club. 
             I'm passionate about technology, and I enjoy working on projects that challenge my skills 
             and creativity.
           </p>

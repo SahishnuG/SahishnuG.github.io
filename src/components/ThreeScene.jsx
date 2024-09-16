@@ -33,8 +33,10 @@ const ThreeScene = () => {
     };
   }, []);
 
-  return (<section id="threescene" className="container" class="">
+  return (<section id="threescene" className="max-w-lg mx-auto p-6 bg-gray-100 rounded-lg shadow-lg">
+    <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-md overflow-hidden md:flex md:items-center md:space-x-6">
     <div class="md:flex" ref={mountRef}></div>
+    </div>
     </section>);
 };
 
