@@ -2,9 +2,10 @@ import React from 'react';
 
 const Contact = () => {
   return (
-    <section id="contact" className="max-w-lg mx-auto p-6 bg-gray-100 rounded-lg shadow-lg">
+    <section id="contact" className="mx-auto p-6 bg-gray-100 rounded-lg shadow-lg">
       <h2 className="text-center text-2xl md:text-3xl font-semibold text-gray-800 mb-6">Contact</h2>
-      <form className="space-y-4">
+      <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-md overflow-hidden md:flex md:items-center md:space-x-6">
+      <form className="space-y-4 p-6">
         <input
           type="text"
           name="name"
@@ -32,6 +33,7 @@ const Contact = () => {
           Send Message
         </button>
       </form>
+      </div>
     </section>
   );
 };

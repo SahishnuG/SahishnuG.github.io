@@ -1,23 +1,24 @@
 import React from 'react';
+import image from '../image.jpg';
 
 const About = () => {
   return (
-    <section id="about" className="max-w-lg mx-auto p-6 bg-gray-100 rounded-lg shadow-lg">
-      <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8">About Me</h2>
+    <section id="about" className="mx-auto p-6 bg-gray-100 rounded-lg shadow-lg dark:bg-gray-800">
+      <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8 dark:text-gray-100">About Me</h2>
       
-      <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-md overflow-hidden md:flex md:items-center md:space-x-6">
+      <div className="dark:bg-gray-700 max-w-2xl mx-auto bg-white rounded-xl shadow-md overflow-hidden md:flex md:items-center md:space-x-6">
         {/* Image Section */}
         <div className="md:flex-shrink-0">
           <img
             className="h-48 w-full object-cover md:h-full md:w-48"
-            src="/image.jpg"
+            src={image}
             alt="My image"
           />
         </div>
         
         {/* Text Section */}
         <div className="p-6">
-          <p className="text-gray-600 text-lg leading-relaxed">
+          <p className="text-gray-600 text-lg leading-relaxed dark:text-gray-300">
             I'm a second-year student at VIT Pune, currently an Executive Commitee member in the IEEE student club. 
             I'm passionate about technology, and I enjoy working on projects that challenge my skills 
             and creativity.

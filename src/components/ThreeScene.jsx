@@ -1,5 +1,4 @@
 // src/components/ThreeScene.js
-
 import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 
@@ -18,7 +17,7 @@ const ThreeScene = () => {
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
 
-    camera.position.z = 5;
+    camera.position.z = 2.5;
 
     const animate = function () {
       requestAnimationFrame(animate);
@@ -33,8 +32,8 @@ const ThreeScene = () => {
     };
   }, []);
 
-  return (<section id="threescene" className="max-w-lg mx-auto p-6 bg-gray-100 rounded-lg shadow-lg">
-    <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-md overflow-hidden md:flex md:items-center md:space-x-6">
+  return (<section id="threescene" className="mx-auto p-6 bg-gray-100 rounded-lg shadow-lg">
+    <div className="md:max-w-2xl mx-auto bg-white rounded-xl shadow-md overflow-hidden md:flex md:items-center">
     <div class="md:flex" ref={mountRef}></div>
     </div>
     </section>);
