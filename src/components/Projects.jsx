@@ -4,8 +4,8 @@ import React from 'react';
 
 const Projects = () => {
   return (
-    <section id="projects" className="mx-auto p-6 bg-gray-100 rounded-lg shadow-lg">
-      <h2 className="text-center text-2xl md:text-3xl font-semibold text-gray-800">Projects</h2>
+    <section id="projects" className="mx-auto p-6 bg-gray-100 rounded-lg shadow-lg dark:bg-gray-800">
+      <h2 className="text-center text-2xl md:text-3xl font-semibold text-gray-800 dark:text-gray-100">Projects</h2>
         <div className="flex:justify-center text-inline">
             <div class="text-center">
                 <h3 className="text-gray-700 text-lg leading-relaxed">ArenaHub</h3>

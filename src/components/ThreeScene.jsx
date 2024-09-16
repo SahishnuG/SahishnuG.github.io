@@ -32,7 +32,7 @@ const ThreeScene = () => {
     };
   }, []);
 
-  return (<section id="threescene" className="mx-auto p-6 bg-gray-100 rounded-lg shadow-lg">
+  return (<section id="threescene" className="mx-auto p-6 bg-gray-100 rounded-lg shadow-lg dark:bg-gray-800">
     <div className="md:max-w-2xl mx-auto bg-white rounded-xl shadow-md overflow-hidden md:flex md:items-center">
     <div class="md:flex" ref={mountRef}></div>
     </div>
