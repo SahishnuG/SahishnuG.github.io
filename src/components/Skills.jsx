@@ -6,8 +6,8 @@ const Skills = () => {
     <section id="skills" className="container">
       <h2>Skills</h2>
       <ul>
-        <li>Skill 1</li>
-        <li>Skill 2</li>
+        <li>Web Dev</li>
+        <li>Machine Learning</li>
         {/* Add more skills as needed */}
       </ul>
     </section>
