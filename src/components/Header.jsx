@@ -1,44 +1,64 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { IoMoon } from "react-icons/io5";
 import { IoSunny } from "react-icons/io5";
 
 const Header = () => {
-  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.add('dark')
-  } else {
-    document.documentElement.classList.remove('dark')
-  }
-    const [dark, setDark] = React.useState(false);
+  // Determine the user's preferred theme on the first render
+  const getInitialTheme = () => {
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+      return true;  // dark mode
+    } else {
+      document.documentElement.classList.remove('dark');
+      return false;  // light mode
+    }
+  };
+
+  const [dark, setDark] = useState(getInitialTheme);
 
   const darkModeHandler = () => {
-      setDark(!dark);
-      document.body.classList.toggle("dark");
-      if (!dark === true){
-        localStorage.theme = 'dark'
-      }
-      else{
-        localStorage.theme = 'light'
-      }
-  }
+    setDark(!dark);
+    document.documentElement.classList.toggle('dark');
+
+    if (!dark) {
+      localStorage.theme = 'dark';
+    } else {
+      localStorage.theme = 'light';
+    }
+  };
+
+  // Apply the correct theme based on state whenever it changes
+  useEffect(() => {
+    if (dark) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [dark]);
+
   return (
     <header className="bg-gray-800 text-white">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between py-6 px-4">
         {/* Heading */}
-        <h1 className="text-2xl md:text-4xl font-bold mb-4 md:mb-0">Hello, I'm Sahishnu</h1>
+        <a href="#about" className="transition duration-500 ease-in-out hover:scale-110 flex flex-col md:flex-row items-center space-x-0 md:space-x-4">
+  <img src={process.env.PUBLIC_URL + '/sg.png'} className="rounded-lg h-12 mb-2 md:mb-0" alt="Logo" />
+  <h1 className="flex items-center text-xl md:text-3xl lg:text-4xl font-bold">
+    Hello,
+    <p className="underline decoration-blue-500 decoration-double ml-2">I'm Sahishnu</p>
+  </h1>
+</a>
+
 
         {/* Navigation */}
         <nav>
           <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 text-center">
             <li>
-            <button className="text-white hover:text-blue-400 transition-colors duration-300" onClick={()=> darkModeHandler()}>
-                {
-                    
-                    dark && <IoSunny />
-                }
-                {
-                    !dark && <IoMoon />
-                }
-            </button>
+              <button
+                className="text-white hover:text-blue-400 transition-colors duration-300"
+                onClick={darkModeHandler}
+              >
+                {dark ? <IoSunny /> : <IoMoon />}
+              </button>
             </li>
             <li>
               <a
@@ -74,18 +94,18 @@ const Header = () => {
             </li>
             <li>
               <a
-                href="#socials"
-                className="text-white hover:text-blue-400 transition-colors duration-300"
-              >
-                Socials
-              </a>
-            </li>
-            <li>
-              <a
                 href="#contact"
                 className="text-white hover:text-blue-400 transition-colors duration-300"
               >
                 Contact
+              </a>
+            </li>
+            <li>
+              <a
+                href="#socials"
+                className="text-white hover:text-blue-400 transition-colors duration-300"
+              >
+                Socials
               </a>
             </li>
           </ul>
