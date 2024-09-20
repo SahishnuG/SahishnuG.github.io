@@ -22,9 +22,9 @@ const ThreeScene = () => {
 
     // Modify material for a brighter, shinier effect
     const material = new THREE.MeshStandardMaterial({
-      color: 0xffffff,    // White color to maximize light reflection
-      emissive: 0xffffff, // Slight emission to give it a glow effect
-      emissiveIntensity: 0.9, // Increase intensity of emissive light
+      color: 0x64b5f6,    // White color to maximize light reflection
+      emissive: 0x000000, // Slight emission to give it a glow effect
+      //emissiveIntensity: 0.9, // Increase intensity of emissive light
     });
 
     // Create the mesh
@@ -40,6 +40,32 @@ const ThreeScene = () => {
 
     // Adjust the camera position
     camera.position.z = 3;
+    const raycaster = new THREE.Raycaster();
+    const mouse = new THREE.Vector2();
+    const handleMouseMove = (event) => {
+      // Update mouse coordinates (-1 to 1 range for both axes)
+      mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+      mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+      // Update raycaster based on the new mouse position
+      raycaster.setFromCamera(mouse, camera);
+
+      // Check for intersections
+      const intersects = raycaster.intersectObject(object);
+
+      if (intersects.length > 0) {
+        // Add emission on hover
+        object.material.emissive.set(0x64b5f6);
+        object.material.emissiveIntensity = 0.9;
+      } else {
+        // Remove emission when not hovering
+        object.material.emissive.set(0x90caf9);
+        object.material.emissiveIntensity = 0.5;
+      }
+    };
+
+    // Add event listener for mouse movement
+    window.addEventListener('mousemove', handleMouseMove);
 
     // Animation loop
     const animate = function () {
@@ -67,6 +93,7 @@ const ThreeScene = () => {
     return () => {
       mountRef.current.removeChild(renderer.domElement);
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
 
