@@ -18,15 +18,13 @@ const ThreeScene = () => {
     controls.enableDamping = true;
 
     // Create a Dodecahedron geometry (more complex than a cube)
-    const geometry = new THREE.DodecahedronGeometry(1, 0);
+    const geometry = new THREE.TorusGeometry(); 
 
     // Modify material for a brighter, shinier effect
     const material = new THREE.MeshStandardMaterial({
       color: 0xffffff,    // White color to maximize light reflection
-      metalness: 1,       // Max metalness for a reflective surface
-      roughness: 0.05,    // Very low roughness for a shiny, mirror-like effect
-      emissive: 0x222222, // Slight emission to give it a glow effect
-      emissiveIntensity: 0.2, // Increase intensity of emissive light
+      emissive: 0xffffff, // Slight emission to give it a glow effect
+      emissiveIntensity: 0.9, // Increase intensity of emissive light
     });
 
     // Create the mesh
