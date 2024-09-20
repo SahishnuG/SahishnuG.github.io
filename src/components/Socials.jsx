@@ -15,7 +15,7 @@ const Socials = () => {
             href="https://in.linkedin.com/in/sahishnu-g-6a245230a"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-800 transition duration-300 ease-in-out flex items-center"
+            className="hover:text-blue-400 text-gray-600 dark:text-gray-300 dark:hover:text-white transition-colors duration-300 flex items-center"
           >
             <AiFillLinkedin className='mr-2'/>
             Sahishnu G
@@ -26,7 +26,7 @@ const Socials = () => {
             href="https://www.instagram.com/gotnw_kira/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-800 transition duration-300 ease-in-out flex items-center"
+            className="hover:text-blue-400 text-gray-600 dark:text-gray-300 dark:hover:text-white transition-colors duration-300 flex items-center"
           >
             <AiFillInstagram className='mr-2'/>
             gotnw_kira
@@ -37,7 +37,7 @@ const Socials = () => {
             href="https://github.com/SahishnuG"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-800 transition duration-300 ease-in-out flex items-center"
+            className="hover:text-blue-400 text-gray-600 dark:text-gray-300 dark:hover:text-white transition-colors duration-300 flex items-center"
           >
             <AiFillGithub className='mr-2'/>
             SahishnuG
@@ -48,7 +48,7 @@ const Socials = () => {
             href="https://discordapp.com/users/546324200177270784"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-800 transition duration-300 ease-in-out flex items-center"
+            className="hover:text-blue-400 text-gray-600 dark:text-gray-300 dark:hover:text-white transition-colors duration-300 flex items-center"
           >
             <AiFillDiscord className='mr-2'/>
             gotnw_kira

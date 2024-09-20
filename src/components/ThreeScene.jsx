@@ -1,35 +1,54 @@
 import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 const ThreeScene = () => {
   const mountRef = useRef(null);
 
   useEffect(() => {
-    // Create a scene, camera, and renderer
+    // Create scene, camera, and renderer
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color( 0x1F2937 );
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     mountRef.current.appendChild(renderer.domElement);
 
-    // Create a cube
-    const geometry = new THREE.BoxGeometry();
-    const material = new THREE.MeshBasicMaterial({ color: 0x0d47a1 });
-    const cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
+    // Add OrbitControls for interactivity
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
 
-    // Adjust the camera to ensure the cube is fully visible
-    camera.position.z = 2;
+    // Create a Dodecahedron geometry (more complex than a cube)
+    const geometry = new THREE.DodecahedronGeometry(1, 0);
+
+    // Modify material for a brighter, shinier effect
+    const material = new THREE.MeshStandardMaterial({
+      color: 0xffffff,    // White color to maximize light reflection
+      metalness: 1,       // Max metalness for a reflective surface
+      roughness: 0.05,    // Very low roughness for a shiny, mirror-like effect
+      emissive: 0x222222, // Slight emission to give it a glow effect
+      emissiveIntensity: 0.2, // Increase intensity of emissive light
+    });
+
+    // Create the mesh
+    const object = new THREE.Mesh(geometry, material);
+    scene.add(object);
+
+    // Adjust lighting for a brighter look
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.8); // Brighter ambient light
+    const pointLight = new THREE.PointLight(0xffffff, 1.5); // Stronger point light for better illumination
+    pointLight.position.set(5, 5, 5); // Adjust position for better effect
+    scene.add(ambientLight);
+    scene.add(pointLight);
+
+    // Adjust the camera position
+    camera.position.z = 3;
 
     // Animation loop
     const animate = function () {
       requestAnimationFrame(animate);
-
-      // Rotate the cube
-      cube.rotation.x += 0.01;
-      cube.rotation.y += 0.01;
-
+      object.rotation.x += 0.01;
+      object.rotation.y += 0.01;
+      controls.update(); // Update orbit controls for damping
       renderer.render(scene, camera);
     };
     animate();
@@ -54,10 +73,11 @@ const ThreeScene = () => {
   }, []);
 
   return (
-    <section id="threescene" className="mx-auto p-6 bg-gray-100 light:rounded-lg light:shadow-lg dark:bg-gray-800">
+    <section id="threescene" className="grid grid-cols-1 mx-auto p-6 bg-gray-100 light:rounded-lg light:shadow-lg dark:bg-gray-800">
       <div className="md:max-w-2xl mx-auto rounded-xl light:shadow-md overflow-hidden md:flex md:items-center transition duration-500 ease-in-out hover:scale-125">
         <div className="w-full h-96" ref={mountRef}></div>
       </div>
+      <p class="text-gray-600 text-lg leading-relaxed dark:text-gray-300 mx-auto">scroll on me!</p>
     </section>
   );
 };
