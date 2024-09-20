@@ -54,7 +54,7 @@ const Header = () => {
           <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 text-center">
             <li>
               <button
-                className="text-white hover:text-blue-400 transition-colors duration-300"
+                className="hover:text-blue-400 light:text-white dark:text-gray-300 dark:hover:text-white transition-colors duration-300"
                 onClick={darkModeHandler}
               >
                 {dark ? <IoSunny /> : <IoMoon />}
@@ -63,7 +63,7 @@ const Header = () => {
             <li>
               <a
                 href="#about"
-                className="text-white hover:text-blue-400 transition-colors duration-300"
+                className="hover:text-blue-400 light:text-white dark:text-gray-300 dark:hover:text-white transition-colors duration-300"
               >
                 About Me
               </a>
@@ -71,7 +71,7 @@ const Header = () => {
             <li>
               <a
                 href="#projects"
-                className="text-white hover:text-blue-400 transition-colors duration-300"
+                className="hover:text-blue-400 light:text-white dark:text-gray-300 dark:hover:text-white transition-colors duration-300"
               >
                 Projects
               </a>
@@ -79,7 +79,7 @@ const Header = () => {
             <li>
               <a
                 href="#skills"
-                className="text-white hover:text-blue-400 transition-colors duration-300"
+                className="hover:text-blue-400 light:text-white dark:text-gray-300 dark:hover:text-white transition-colors duration-300"
               >
                 Skills
               </a>
@@ -87,7 +87,7 @@ const Header = () => {
             <li>
               <a
                 href="#experience"
-                className="text-white hover:text-blue-400 transition-colors duration-300"
+                className="hover:text-blue-400 light:text-white dark:text-gray-300 dark:hover:text-white transition-colors duration-300"
               >
                 Experience
               </a>
@@ -95,7 +95,7 @@ const Header = () => {
             <li>
               <a
                 href="#contact"
-                className="text-white hover:text-blue-400 transition-colors duration-300"
+                className="hover:text-blue-400 light:text-white dark:text-gray-300 dark:hover:text-white transition-colors duration-300"
               >
                 Contact
               </a>
@@ -103,7 +103,7 @@ const Header = () => {
             <li>
               <a
                 href="#socials"
-                className="text-white hover:text-blue-400 transition-colors duration-300"
+                className="hover:text-blue-400 light:text-white dark:text-gray-300 dark:hover:text-white transition-colors duration-300"
               >
                 Socials
               </a>
