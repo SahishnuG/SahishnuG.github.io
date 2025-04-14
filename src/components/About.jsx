@@ -8,9 +8,9 @@ const About = () => {
       <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8 dark:text-gray-100">About Me</h2>
       
         {/* Image Section */}
-        <div className="relative shadow-lg m-auto bg-gradient-to-b from-transparent dark:to-gray-800 to-gray-100 rounded-full w-80 h-80">
+        <div className="relative shadow-lg m-auto bg-gradient-to-b from-transparent dark:to-gray-800 to-gray-100 rounded-full w-80 h-80 transition duration-500 ease-in-out hover:scale-110">
           <img
-            className="rounded-xl object-cover mx-auto transition duration-500 ease-in-out hover:scale-110"
+            className="rounded-full object-scale-down mx-auto"
             src={process.env.PUBLIC_URL + '/image.png'}
             alt="My image"
           />
@@ -19,7 +19,7 @@ const About = () => {
         {/* Text Section */}
         <div className="p-6">
           <p className="text-gray-600 text-lg leading-relaxed dark:text-gray-300">
-            I'm a second-year student at VIT Pune, who is passionate about technology.
+            I'm a CS(AIML) student at VIT Pune, who is passionate about technology.
             I enjoy working on projects that challenge my skills and creativity.
             I draw and play the guitar and piano in my free time. I also have an interest in literature.
           </p>
