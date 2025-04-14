@@ -21,7 +21,7 @@ const Projects = () => {
       </div>
     </a>
 
-    <a href="https://replit.com/@gotnwkira/InkNarrator" className="mx-auto bg-white rounded-lg shadow-md overflow-hidden dark:bg-gray-800 hover:dark:bg-gray-700 hover:ring-2 dark:hover:ring-gray-300 hover:ring-blue-500 transition duration-500 ease-in-out hover:scale-125 hover:my-6" target="_blank"
+    <a href="https://github.com/SahishnuG/InkNarrator" className="mx-auto bg-white rounded-lg shadow-md overflow-hidden dark:bg-gray-800 hover:dark:bg-gray-700 hover:ring-2 dark:hover:ring-gray-300 hover:ring-blue-500 transition duration-500 ease-in-out hover:scale-125 hover:my-6" target="_blank"
             rel="noopener noreferrer">
       <img src={inknarrator} alt="InkNarrator" className="w-full h-40 object-cover" />
       <div className="p-4">
