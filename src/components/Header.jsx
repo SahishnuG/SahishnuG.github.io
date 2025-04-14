@@ -41,7 +41,7 @@ const Header = () => {
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between py-6 px-4">
         {/* Heading */}
         <a href="#about" className="transition duration-500 ease-in-out hover:scale-110 flex flex-col md:flex-row items-center space-x-0 md:space-x-4">
-  <img src={process.env.PUBLIC_URL + '/sg.png'} className="rounded-lg h-12 mb-2 md:mb-0" alt="Logo" />
+  <img src={process.env.PUBLIC_URL + '/SG.png'} className="rounded-lg h-12 mb-2 md:mb-0" alt="Logo" />
   <h1 className="flex items-center text-xl md:text-3xl lg:text-4xl font-bold">
     Hello,
     <p className="underline decoration-blue-500 decoration-double ml-2">I'm Sahishnu</p>
