@@ -1,11 +1,15 @@
 
 import React from 'react';
+
 import arenahub from '../arenahub.png';
 import inknarrator from '../inknarrator.png';
+import solvex from '../solvex.png'
+import agentplay from '../agentplay.png'
+
 import web from '../web.png'
 import ml from '../ml.jpeg'
-import c from '../c.jpg'
-import python from '../python.webp'
+import genai from '../genai.png'
+import sql from '../sql.png'
 
 const Projects = () => {
   return (
@@ -30,21 +34,21 @@ const Projects = () => {
       </div>
     </a>
 
-    <a href="https://replit.com/@gotnwkira/InkNarrator" className="mx-auto bg-white rounded-lg shadow-md overflow-hidden dark:bg-gray-800 hover:dark:bg-gray-700 hover:ring-2 dark:hover:ring-gray-300 hover:ring-blue-500 transition duration-500 ease-in-out hover:scale-125 hover:my-6" target="_blank"
+    <a href="https://github.com/SahishnuG/Solvex_codesmith" className="mx-auto bg-white rounded-lg shadow-md overflow-hidden dark:bg-gray-800 hover:dark:bg-gray-700 hover:ring-2 dark:hover:ring-gray-300 hover:ring-blue-500 transition duration-500 ease-in-out hover:scale-125 hover:my-6" target="_blank"
             rel="noopener noreferrer">
-      <img src={inknarrator} alt="InkNarrator" className="w-full h-40 object-cover" />
+      <img src={solvex} alt="Log analyser" className="w-full h-40 object-cover" />
       <div className="p-4">
-        <h3 className="dark:text-gray-200 text-gray-700 text-lg font-semibold">InkNarrator</h3>
-        <p className="dark:text-gray-300 text-gray-600">Story writer bot</p>
+        <h3 className="dark:text-gray-200 text-gray-700 text-lg font-semibold">Log Analysis API</h3>
+        <p className="dark:text-gray-300 text-gray-600">Async real time log analyser using Agentic AI and RAG</p>
       </div>
     </a>
 
-    <a href="https://replit.com/@gotnwkira/InkNarrator" className="mx-auto bg-white rounded-lg shadow-md overflow-hidden dark:bg-gray-800 hover:dark:bg-gray-700 hover:ring-2 dark:hover:ring-gray-300 hover:ring-blue-500 transition duration-500 ease-in-out hover:scale-125 hover:my-6" target="_blank"
+    <a href="https://github.com/IEEE-SB-VIT-Pune/agentPlay" className="mx-auto bg-white rounded-lg shadow-md overflow-hidden dark:bg-gray-800 hover:dark:bg-gray-700 hover:ring-2 dark:hover:ring-gray-300 hover:ring-blue-500 transition duration-500 ease-in-out hover:scale-125 hover:my-6" target="_blank"
             rel="noopener noreferrer">
-      <img src={inknarrator} alt="InkNarrator" className="w-full h-40 object-cover" />
+      <img src={agentplay} alt="InkNarrator" className="w-full h-40 object-cover" />
       <div className="p-4">
-        <h3 className="dark:text-gray-200 text-gray-700 text-lg font-semibold">InkNarrator</h3>
-        <p className="dark:text-gray-300 text-gray-600">Story writer bot</p>
+        <h3 className="dark:text-gray-200 text-gray-700 text-lg font-semibold">AgentPlay</h3>
+        <p className="dark:text-gray-300 text-gray-600">Chrome extension that enhances YouTube videos with AI voice translation, summarization, notes generation, and RAG Q&A features.</p>
       </div>
     </a>
   </div>
@@ -67,19 +71,19 @@ const Projects = () => {
       </div>
     </div>
 
-    {/* Python */}
+    {/* SQL */}
     <div className="mx-auto bg-white rounded-lg shadow-md overflow-hidden dark:bg-gray-800 hover:dark:bg-gray-700 transition duration-500 ease-in-out hover:scale-110">
-      <img src={python} alt="InkNarrator" className="w-full h-40 object-cover" />
+      <img src={sql} alt="InkNarrator" className="w-full h-40 object-cover" />
       <div className="p-4">
-        <h3 className="dark:text-gray-200 text-gray-700 text-lg font-semibold text-center">Python</h3>
+        <h3 className="dark:text-gray-200 text-gray-700 text-lg font-semibold text-center">SQL</h3>
       </div>
     </div>
 
-    {/* C */}
+    {/* GenAI */}
     <div className="mx-auto bg-white rounded-lg shadow-md overflow-hidden dark:bg-gray-800 hover:dark:bg-gray-700 transition duration-500 ease-in-out hover:scale-110">
-      <img src={c} alt="InkNarrator" className="w-full h-40 object-cover" />
+      <img src={genai} alt="InkNarrator" className="w-full h-40 object-cover" />
       <div className="p-4">
-        <h3 className="dark:text-gray-200 text-gray-700 text-lg font-semibold text-center">C</h3>
+        <h3 className="dark:text-gray-200 text-gray-700 text-lg font-semibold text-center">GenAI</h3>
       </div>
     </div>
   </div>
