@@ -23,13 +23,13 @@ const Socials = () => {
         </li>
         <li className='mx-auto'>
           <a
-            href="https://www.instagram.com/gotnw_kira/"
+            href="https://www.instagram.com/sahishnug/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-400 text-gray-600 dark:text-gray-300 dark:hover:text-white transition-colors duration-300 flex items-center"
           >
             <AiFillInstagram className='mr-2'/>
-            gotnw_kira
+            sahishnug
           </a>
         </li>
         <li className='mx-auto'>
